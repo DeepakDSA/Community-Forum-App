@@ -1,0 +1,11 @@
+COMMUNITY & FORUM APP 
+
+Gamers' Social Hub: Craft the Ultimate Video Game Community Platform 
+Overview: Design and develop a social network platform akin to Letterboxd, but specifically for video games. The platform should enable users to discover, rate, and discuss video games within a vibrant community. Teams that successfully integrate core social networking features, including user profiles, game tracking, reviews, and social interactions, will have a significant advantage in the competition. 
+Objective:
+● Develop a Video Game Social Network: Create a web-based platform where users can explore, rate etc with a wide array of video games. 
+● Incorporate Social Networking Features: Implement core social functionalities like user profiles, friends, game lists, reviews, comments, and discussions. 
+● Focus on UI/UX Design: Since the platform is 
+entertainment-centric, design an intuitive and engaging user interface that enhances user experience. 
+● Optimize Database Handling: Given the nature of the platform, consider using a NoSQL database, with Neo4j being highly recommended for its graph-based data model, which is ideal for managing social relationships and connections. 
+● Automation and Productivity Features: Automate common tasks like game recommendations based on user preferences
