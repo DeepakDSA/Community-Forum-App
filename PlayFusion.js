@@ -28,3 +28,5 @@ document.addEventListener('DOMContentLoaded', function() {
         textElement.style.opacity = '1'; // Make the text visible
     }, 500);
 });
+
+
