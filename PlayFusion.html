@@ -24,22 +24,45 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#forums">Categories</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#categories">Categories</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#action">Action</a></li>
+                        <li><a href="#horror">Horror</a></li>
+                        <li><a href="#racing">Racing</a></li>
+                        <li><a href="#puzzle">Puzzle</a></li>
+                        <li><a href="#simulation">Simulation</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <div class="user-profile">
-            <a href="#">Sign in</a>
-            <a href="#">Sign up</a>
+            <a href="signin.html">Sign in</a>
+            <a href="signup.html">Sign up</a>
             
             <img src="image-removebg-preview (3).png" alt="User Profile Picture">
         </div>
         
     </header>
-
+    <!-- Button to toggle the chatbox -->
+    <button class="chatbox-toggle" onclick="toggleChatbox()">Chat</button>
+    
+    <div class="chatbox" id="chatbox">
+        <div class="chatbox-header">
+            Chatbot
+            <button class="chatbox-close" onclick="toggleChatbox()">X</button>
+        </div>
+        <div class="chatbox-body" id="chatbox-body">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div class="chatbox-footer">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
     <section id="hero">
         <div class="enlarge-text" id="welcomeText">
             Welcome to Gamers' Social Hub!
@@ -58,16 +81,16 @@
             </div>
         </div>
         <section class="games-section">
-            <h2>Top Rated Games</h2>
+            <h2 >Top Rated Games</h2>
             <div class="games-grid">
                 <!-- Game Cards -->
                 <div class="game-card">
-                    <img src="pubg1.jpg" alt="Game 1">
-                    <div class="game-info">
-                        <h3>Game Title 1</h3>
+                    <a href="gameinfo.html"><img src="pubg1.jpg" alt="Game 1"></a>
+                    <div class="game-info" id="pubg">
+                        <h3>PUBG</h3>
                         <div class="rating">
-                            <span class="stars">★★★★☆</span>
-                            <span class="rating-count">(4.5/5)</span>
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(4.9/5)</span>
                         </div>
                         <p class="likes">1500 Likes</p>
                     </div>
@@ -76,12 +99,12 @@
                 <div class="game-card">
                     <img src="cod.webp" alt="Game 2">
                     <div class="game-info">
-                        <h3>Game Title 2</h3>
+                        <h3>Call of Duty</h3>
                         <div class="rating">
-                            <span class="stars">★★★★★</span>
-                            <span class="rating-count">(5/5)</span>
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(4.2/5)</span>
                         </div>
-                        <p class="likes">2000 Likes</p>
+                        <p class="likes">3000 Likes</p>
                     </div>
                 </div>
                 <!-- Add more game cards here -->
@@ -102,10 +125,10 @@
                     <div class="game-info">
                         <h3>Game Title 2</h3>
                         <div class="rating">
-                            <span class="stars">★★★★★</span>
-                            <span class="rating-count">(5/5)</span>
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(4.1/5)</span>
                         </div>
-                        <p class="likes">2000 Likes</p>
+                        <p class="likes">4000 Likes</p>
                     </div>
                 </div>
                 <div class="game-card">
@@ -142,64 +165,64 @@
                     </div>
                 </div>
                 <div class="game-card">
-                    <img src="wwe.jpg" alt="Game 2">
+                    <img src="wwe.jpg" alt="">
                     <div class="game-info">
-                        <h3>Game Title 2</h3>
+                        <h3>2K23</h3>
                         <div class="rating">
-                            <span class="stars">★★★★★</span>
-                            <span class="rating-count">(5/5)</span>
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(4.1/5)</span>
                         </div>
-                        <p class="likes">2000 Likes</p>
+                        <p class="likes">3500 Likes</p>
                     </div>
                 </div>
                 <div class="game-card">
                     <img src="raji.jpeg" alt="Game 2">
                     <div class="game-info">
-                        <h3>Game Title 2</h3>
+                        <h3>Raji</h3>
                         <div class="rating">
                             <span class="stars">★★★★★</span>
                             <span class="rating-count">(5/5)</span>
                         </div>
-                        <p class="likes">2000 Likes</p>
+                        <p class="likes">2010 Likes</p>
                     </div>
                 </div>
                 <div class="game-card">
                     <img src="godwar.jpg" alt="Game 2">
                     <div class="game-info">
-                        <h3>Game Title 2</h3>
+                        <h3>God Of War</h3>
                         <div class="rating">
-                            <span class="stars">★★★★★</span>
-                            <span class="rating-count">(5/5)</span>
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(4.2/5)</span>
                         </div>
-                        <p class="likes">2000 Likes</p>
+                        <p class="likes">2500Likes</p>
                     </div>
                 </div>
                 <div class="game-card">
                     <img src="cs.jpg" alt="Game 2">
                     <div class="game-info">
-                        <h3>Game Title 2</h3>
+                        <h3>Counter Strike 2</h3>
                         <div class="rating">
                             <span class="stars">★★★★★</span>
                             <span class="rating-count">(5/5)</span>
                         </div>
-                        <p class="likes">2000 Likes</p>
+                        <p class="likes">3800Likes</p>
                     </div>
                 </div>
                 <div class="game-card">
                     <img src="gta.jpg" alt="Game 2">
                     <div class="game-info">
-                        <h3>Game Title 2</h3>
+                        <h3>GTAV</h3>
                         <div class="rating">
                             <span class="stars">★★★★★</span>
                             <span class="rating-count">(5/5)</span>
                         </div>
-                        <p class="likes">2000 Likes</p>
+                        <p class="likes">2500 Likes</p>
                     </div>
                 </div>
                 <div class="game-card">
                     <img src="PvsZ.jpg" alt="Game 2">
                     <div class="game-info">
-                        <h3>Game Title 2</h3>
+                        <h3>Plant Vs Zombies</h3>
                         <div class="rating">
                             <span class="stars">★★★★★</span>
                             <span class="rating-count">(5/5)</span>
@@ -210,65 +233,65 @@
                 <div class="game-card">
                     <img src="rainbow.jpg" alt="Game 2">
                     <div class="game-info">
-                        <h3>Game Title 2</h3>
+                        <h3>Rainbow Six</h3>
                         <div class="rating">
-                            <span class="stars">★★★★★</span>
-                            <span class="rating-count">(5/5)</span>
+                            <span class="stars">★★★☆☆</span>
+                            <span class="rating-count">(3.1/5)</span>
                         </div>
-                        <p class="likes">2000 Likes</p>
+                        <p class="likes">1800 Likes</p>
                     </div>
                 </div>
                 <div class="game-card">
                     <img src="cricket.avif" alt="Game 2">
                     <div class="game-info">
-                        <h3>Game Title 2</h3>
+                        <h3>Cricket 24</h3>
                         <div class="rating">
                             <span class="stars">★★★★★</span>
                             <span class="rating-count">(5/5)</span>
                         </div>
-                        <p class="likes">2000 Likes</p>
+                        <p class="likes">4000 Likes</p>
                     </div>
                 </div>
                 <div class="game-card">
                     <img src="need.jpg" alt="Game 2">
                     <div class="game-info">
-                        <h3>Game Title 2</h3>
+                        <h3>Need For Speed</h3>
                         <div class="rating">
-                            <span class="stars">★★★★★</span>
-                            <span class="rating-count">(5/5)</span>
+                            <span class="stars">★★★☆☆</span>
+                            <span class="rating-count">(3.2/5)</span>
                         </div>
-                        <p class="likes">2000 Likes</p>
+                        <p class="likes">1980 Likes</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <section class="games-section">
+    <section class="games-section" id="action">
         <h2>Action</h2>
         <div class="games-grid">
             <!-- Game Cards -->
             <div class="game-card">
                 <img src="reddeadaction.jpg" alt="Game 1">
                 <div class="game-info">
-                    <h3>Game Title 1</h3>
+                    <h3>Red Dead Redemption </h3>
                     <div class="rating">
                         <span class="stars">★★★★☆</span>
-                        <span class="rating-count">(4.5/5)</span>
+                        <span class="rating-count">(4.1/5)</span>
                     </div>
-                    <p class="likes">1500 Likes</p>
+                    <p class="likes">2100 Likes</p>
                 </div>
             </div>
             <!-- Repeat for other games -->
             <div class="game-card">
                 <img src="thewitcheraction.jpg" alt="Game 2">
                 <div class="game-info">
-                    <h3>Game Title 2</h3>
+                    <h3>The Witcher Wild Hunt</h3>
                     <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">(4.1/5)</span>
                     </div>
-                    <p class="likes">2000 Likes</p>
+                    <p class="likes">2310 Likes</p>
                 </div>
             </div>
             <!-- Add more game cards here -->
@@ -276,144 +299,144 @@
             <div class="game-card">
                 <img src="spideraction.jpg" alt="Game 2">
                 <div class="game-info">
-                    <h3>Game Title 2</h3>
+                    <h3>Spider Man</h3>
                     <div class="rating">
                         <span class="stars">★★★★★</span>
                         <span class="rating-count">(5/5)</span>
                     </div>
-                    <p class="likes">2000 Likes</p>
+                    <p class="likes">3900 Likes</p>
                 </div>
             </div>
             <div class="game-card">
                 <img src="devilmay.webp" alt="Game 2">
                 <div class="game-info">
-                    <h3>Game Title 2</h3>
+                    <h3>Devil May Cry</h3>
                     <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
+                        <span class="stars">★★★☆☆</span>
+                        <span class="rating-count">(3.1/5)</span>
                     </div>
-                    <p class="likes">2000 Likes</p>
+                    <p class="likes">1720 Likes</p>
                 </div>
             </div>
             <div class="game-card">
                 <img src="tombraider.jpg" alt="Game 2">
                 <div class="game-info">
-                    <h3>Game Title 2</h3>
+                    <h3>Tomb Raider</h3>
                     <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">(4.1/5)</span>
                     </div>
-                    <p class="likes">2000 Likes</p>
+                    <p class="likes">3100 Likes</p>
                 </div>
             </div>
             <div class="game-card">
                 <img src="apex.jpg" alt="Game 2">
                 <div class="game-info">
-                    <h3>Game Title 2</h3>
+                    <h3>Apex Legends</h3>
                     <div class="rating">
                         <span class="stars">★★★★★</span>
                         <span class="rating-count">(5/5)</span>
                     </div>
-                    <p class="likes">2000 Likes</p>
+                    <p class="likes">3000 Likes</p>
                 </div>
             </div>
             <div class="game-card">
                 <img src="valorant.jpg" alt="Game 2">
                 <div class="game-info">
-                    <h3>Game Title 2</h3>
+                    <h3>Valorant</h3>
                     <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">(4/5)</span>
                     </div>
-                    <p class="likes">2000 Likes</p>
+                    <p class="likes">2311 Likes</p>
                 </div>
             </div>
             <div class="game-card">
                 <img src="wwe.jpg" alt="Game 2">
                 <div class="game-info">
-                    <h3>Game Title 2</h3>
+                    <h3>WWE 2K24</h3>
                     <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">(4/5)</span>
                     </div>
-                    <p class="likes">2000 Likes</p>
+                    <p class="likes">2600 Likes</p>
                 </div>
             </div>
             <div class="game-card">
                 <img src="batman.png" alt="Game 2">
                 <div class="game-info">
-                    <h3>Game Title 2</h3>
+                    <h3>Batman</h3>
                     <div class="rating">
                         <span class="stars">★★★★★</span>
                         <span class="rating-count">(5/5)</span>
                     </div>
-                    <p class="likes">2000 Likes</p>
+                    <p class="likes">3400 Likes</p>
                 </div>
             </div>
             <div class="game-card">
                 <img src="godwar.jpg" alt="Game 2">
                 <div class="game-info">
-                    <h3>Game Title 2</h3>
+                    <h3>God Of War</h3>
                     <div class="rating">
                         <span class="stars">★★★★★</span>
                         <span class="rating-count">(5/5)</span>
                     </div>
-                    <p class="likes">2000 Likes</p>
+                    <p class="likes">4200 Likes</p>
                 </div>
             </div>
             <div class="game-card">
                 <img src="bioshops.jpg" alt="Game 2">
                 <div class="game-info">
-                    <h3>Game Title 2</h3>
+                    <h3>Bioshock</h3>
                     <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
+                        <span class="stars">★★★☆☆</span>
+                        <span class="rating-count">(3.1/5)</span>
                     </div>
-                    <p class="likes">2000 Likes</p>
+                    <p class="likes">1613 Likes</p>
                 </div>
             </div>
             <div class="game-card">
                 <img src="monster.jpg" alt="Game 2">
                 <div class="game-info">
-                    <h3>Game Title 2</h3>
+                    <h3>Monster</h3>
                     <div class="rating">
                         <span class="stars">★★★★★</span>
                         <span class="rating-count">(5/5)</span>
                     </div>
-                    <p class="likes">2000 Likes</p>
+                    <p class="likes">3950 Likes</p>
                 </div>
             </div>
             <div class="game-card">
                 <img src="gta.jpg" alt="Game 2">
                 <div class="game-info">
-                    <h3>Game Title 2</h3>
+                    <h3>GTAV</h3>
                     <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">(4.0/5)</span>
                     </div>
-                    <p class="likes">2000 Likes</p>
+                    <p class="likes">3211 Likes</p>
                 </div>
             </div>
             <div class="game-card">
                 <img src="rainbow.jpg" alt="Game 2">
                 <div class="game-info">
-                    <h3>Game Title 2</h3>
+                    <h3>Rainbow</h3>
                     <div class="rating">
                         <span class="stars">★★★★★</span>
                         <span class="rating-count">(5/5)</span>
                     </div>
-                    <p class="likes">2000 Likes</p>
+                    <p class="likes">4120 Likes</p>
                 </div>
             </div>
             <div class="game-card">
                 <img src="need.jpg" alt="Game 2">
                 <div class="game-info">
-                    <h3>Game Title 2</h3>
+                    <h3>Need For Speed</h3>
                     <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
+                        <span class="stars">★★★☆☆</span>
+                        <span class="rating-count">(3/5)</span>
                     </div>
-                    <p class="likes">2000 Likes</p>
+                    <p class="likes">1840 Likes</p>
                 </div>
             </div>
             <div class="game-card">
@@ -429,12 +452,12 @@
             </div>
         </div>
     </section>
-    <section class="games-section">
+    <section class="games-section" id="sports">
         <h2>Sports</h2>
         <div class="games-grid">
             <!-- Game Cards -->
             <div class="game-card">
-                <img src="pubg1.jpg" alt="Game 1">
+                <img src="fifa.jpg" alt="Game 1">
                 <div class="game-info">
                     <h3>Game Title 1</h3>
                     <div class="rating">
@@ -446,7 +469,7 @@
             </div>
             <!-- Repeat for other games -->
             <div class="game-card">
-                <img src="cod.webp" alt="Game 2">
+                <img src="fifamanager.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -459,7 +482,7 @@
             <!-- Add more game cards here -->
             <!-- ... -->
             <div class="game-card">
-                <img src="codops1.jpg" alt="Game 2">
+                <img src="fifa14manager.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -470,7 +493,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="coc.jpg" alt="Game 2">
+                <img src="nba.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -481,7 +504,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="tombraider.jpg" alt="Game 2">
+                <img src="realpool.jpeg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -492,7 +515,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="apex.jpg" alt="Game 2">
+                <img src="tennis.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -503,7 +526,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="valorant.jpg" alt="Game 2">
+                <img src="baseball.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -514,7 +537,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="wwe.jpg" alt="Game 2">
+                <img src="soccer.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -525,7 +548,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="raji.jpeg" alt="Game 2">
+                <img src="donbradman.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -536,7 +559,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="godwar.jpg" alt="Game 2">
+                <img src="cricket19.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -547,7 +570,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="cs.jpg" alt="Game 2">
+                <img src="carrom.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -569,7 +592,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="PvsZ.jpg" alt="Game 2">
+                <img src="ludo.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -580,7 +603,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="rainbow.jpg" alt="Game 2">
+                <img src="chess.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -602,7 +625,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="need.jpg" alt="Game 2">
+                <img src="badminton.jpeg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -614,12 +637,12 @@
             </div>
         </div>
     </section>
-    <section class="games-section">
+    <section class="games-section" id="racing">
         <h2>Racing</h2>
         <div class="games-grid">
             <!-- Game Cards -->
             <div class="game-card">
-                <img src="pubg1.jpg" alt="Game 1">
+                <img src="needforspeed.webp" alt="Game 1">
                 <div class="game-info">
                     <h3>Game Title 1</h3>
                     <div class="rating">
@@ -631,7 +654,7 @@
             </div>
             <!-- Repeat for other games -->
             <div class="game-card">
-                <img src="cod.webp" alt="Game 2">
+                <img src="mostwantedrace.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -644,7 +667,7 @@
             <!-- Add more game cards here -->
             <!-- ... -->
             <div class="game-card">
-                <img src="codops1.jpg" alt="Game 2">
+                <img src="rival.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -655,7 +678,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="coc.jpg" alt="Game 2">
+                <img src="drdriving.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -666,7 +689,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="tombraider.jpg" alt="Game 2">
+                <img src="asphalt.jpeg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -677,7 +700,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="apex.jpg" alt="Game 2">
+                <img src="hillclimb.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -688,7 +711,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="valorant.jpg" alt="Game 2">
+                <img src="forza.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -699,95 +722,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="wwe.jpg" alt="Game 2">
-                <div class="game-info">
-                    <h3>Game Title 2</h3>
-                    <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
-                    </div>
-                    <p class="likes">2000 Likes</p>
-                </div>
-            </div>
-            <div class="game-card">
-                <img src="raji.jpeg" alt="Game 2">
-                <div class="game-info">
-                    <h3>Game Title 2</h3>
-                    <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
-                    </div>
-                    <p class="likes">2000 Likes</p>
-                </div>
-            </div>
-            <div class="game-card">
-                <img src="godwar.jpg" alt="Game 2">
-                <div class="game-info">
-                    <h3>Game Title 2</h3>
-                    <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
-                    </div>
-                    <p class="likes">2000 Likes</p>
-                </div>
-            </div>
-            <div class="game-card">
-                <img src="cs.jpg" alt="Game 2">
-                <div class="game-info">
-                    <h3>Game Title 2</h3>
-                    <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
-                    </div>
-                    <p class="likes">2000 Likes</p>
-                </div>
-            </div>
-            <div class="game-card">
-                <img src="gta.jpg" alt="Game 2">
-                <div class="game-info">
-                    <h3>Game Title 2</h3>
-                    <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
-                    </div>
-                    <p class="likes">2000 Likes</p>
-                </div>
-            </div>
-            <div class="game-card">
-                <img src="PvsZ.jpg" alt="Game 2">
-                <div class="game-info">
-                    <h3>Game Title 2</h3>
-                    <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
-                    </div>
-                    <p class="likes">2000 Likes</p>
-                </div>
-            </div>
-            <div class="game-card">
-                <img src="rainbow.jpg" alt="Game 2">
-                <div class="game-info">
-                    <h3>Game Title 2</h3>
-                    <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
-                    </div>
-                    <p class="likes">2000 Likes</p>
-                </div>
-            </div>
-            <div class="game-card">
-                <img src="cricket.avif" alt="Game 2">
-                <div class="game-info">
-                    <h3>Game Title 2</h3>
-                    <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-count">(5/5)</span>
-                    </div>
-                    <p class="likes">2000 Likes</p>
-                </div>
-            </div>
-            <div class="game-card">
-                <img src="need.jpg" alt="Game 2">
+                <img src="forzastreet.jpeg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -799,12 +734,12 @@
             </div>
         </div>
     </section>
-    <section class="games-section">
-        <h2>Horror</h2>
+    <section class="games-section" id="puzzle">
+        <h2>Puzzle</h2>
         <div class="games-grid">
             <!-- Game Cards -->
             <div class="game-card">
-                <img src="pubg1.jpg" alt="Game 1">
+                <img src="word.jpeg" alt="Game 1">
                 <div class="game-info">
                     <h3>Game Title 1</h3>
                     <div class="rating">
@@ -816,7 +751,7 @@
             </div>
             <!-- Repeat for other games -->
             <div class="game-card">
-                <img src="cod.webp" alt="Game 2">
+                <img src="maze.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -829,7 +764,7 @@
             <!-- Add more game cards here -->
             <!-- ... -->
             <div class="game-card">
-                <img src="codops1.jpg" alt="Game 2">
+                <img src="braingames.jpeg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -840,7 +775,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="coc.jpg" alt="Game 2">
+                <img src="crossword.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -851,7 +786,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="tombraider.jpg" alt="Game 2">
+                <img src="block.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -873,7 +808,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="valorant.jpg" alt="Game 2">
+                <img src="nopuzzllee.jpeg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -884,7 +819,49 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="wwe.jpg" alt="Game 2">
+                <img src="answer.jpg" alt="Game 2">
+                <div class="game-info">
+                    <h3>Game Title 2</h3>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">(5/5)</span>
+                    </div>
+                    <p class="likes">2000 Likes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="games-section" id="horror">
+        <h2>Horror</h2>
+        <div class="games-grid">
+            <!-- Game Cards -->
+            <div class="game-card">
+                <img src="granny.jpeg" alt="Game 1">
+                <div class="game-info">
+                    <h3>Game Title 1</h3>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">(4.5/5)</span>
+                    </div>
+                    <p class="likes">1500 Likes</p>
+                </div>
+            </div>
+            <!-- Repeat for other games -->
+            <div class="game-card">
+                <img src="evil.jpg" alt="Game 2">
+                <div class="game-info">
+                    <h3>Game Title 2</h3>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">(5/5)</span>
+                    </div>
+                    <p class="likes">2000 Likes</p>
+                </div>
+            </div>
+            <!-- Add more game cards here -->
+            <!-- ... -->
+            <div class="game-card">
+                <img src="residentevil.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -895,7 +872,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="raji.jpeg" alt="Game 2">
+                <img src="evilnun.jpeg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -906,7 +883,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="godwar.jpg" alt="Game 2">
+                <img src="dyingnight.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -917,7 +894,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="cs.jpg" alt="Game 2">
+                <img src="deadlight.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -928,7 +905,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="gta.jpg" alt="Game 2">
+                <img src="deadspace.jpeg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -939,7 +916,49 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="PvsZ.jpg" alt="Game 2">
+                <img src="alienshooter.jpeg" alt="Game 2">
+                <div class="game-info">
+                    <h3>Game Title 2</h3>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">(5/5)</span>
+                    </div>
+                    <p class="likes">2000 Likes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="games-section" id="simulation">
+        <h2>Simulation</h2>
+        <div class="games-grid">
+            <!-- Game Cards -->
+            <div class="game-card">
+                <img src="formula1.jpg" alt="Game 1">
+                <div class="game-info">
+                    <h3>Game Title 1</h3>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">(4.5/5)</span>
+                    </div>
+                    <p class="likes">1500 Likes</p>
+                </div>
+            </div>
+            <!-- Repeat for other games -->
+            <div class="game-card">
+                <img src="bus simulator.jpeg" alt="Game 2">
+                <div class="game-info">
+                    <h3>Game Title 2</h3>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">(5/5)</span>
+                    </div>
+                    <p class="likes">2000 Likes</p>
+                </div>
+            </div>
+            <!-- Add more game cards here -->
+            <!-- ... -->
+            <div class="game-card">
+                <img src="goatsimulator.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -950,7 +969,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="rainbow.jpg" alt="Game 2">
+                <img src="sims3.jpeg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -961,7 +980,7 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="cricket.avif" alt="Game 2">
+                <img src="lifesimulator.jpg" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">
@@ -972,7 +991,29 @@
                 </div>
             </div>
             <div class="game-card">
-                <img src="need.jpg" alt="Game 2">
+                <img src="farmingsimulator.jpeg" alt="Game 2">
+                <div class="game-info">
+                    <h3>Game Title 2</h3>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">(5/5)</span>
+                    </div>
+                    <p class="likes">2000 Likes</p>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="bowling.jpg" alt="Game 2">
+                <div class="game-info">
+                    <h3>Game Title 2</h3>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">(5/5)</span>
+                    </div>
+                    <p class="likes">2000 Likes</p>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="meowmeow.webp" alt="Game 2">
                 <div class="game-info">
                     <h3>Game Title 2</h3>
                     <div class="rating">

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forgot Password</title>
+<link rel="stylesheet" href="forget.css">
+</head>
+<body>
+<div class="forgot-password-container">
+<h2>Forgot Password</h2>
+<form action="/reset-password"method="POST" id="myForm">
+<input type="email" name="email" placeholder="Enter your email" required>
+<input type="submit" value="Reset Password">
+<script>
+    // JavaScript to handle form submission
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        window.location.href = "password.html"; // Redirect to another page
+    });
+</script>
+</form>
+</div>
+</body>
+</html>

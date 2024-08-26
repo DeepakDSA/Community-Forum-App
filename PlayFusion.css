@@ -16,7 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;    
+    padding: 15px 30px;   
 }
 .logo {
     display: flex;
@@ -314,5 +314,149 @@ footer {
     }
 }
 
+/* General Styles for the Navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
 
+nav ul li {
+    position: relative;
+}
 
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    display: block;
+}
+
+/* nav ul li a:hover {
+    background-color: skyblue;
+} */
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+    z-index: 1;
+    display: flex; /* Makes the dropdown horizontal */
+    gap: 5px; /* Adds space between items */
+    display: none;
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    color:whitesmoke;
+    padding: 5px 5px;
+}
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+.dropdown-menu.show {
+    display: flex;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* Basic styling for the chatbot */
+/* Basic styling for the chatbox */
+.chatbox {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    display: none; /* Initially hidden */
+}
+
+.chatbox-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+.chatbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.chatbox-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 200px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chatbox-footer {
+    display: flex;
+    padding: 10px;
+}
+
+.chatbox-footer input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.chatbox-footer button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.chatbox-footer button:hover {
+    background-color: #0056b3;
+}
+
+/* Button to toggle chatbox visibility */
+.chatbox-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.chatbox-toggle:hover {
+    background-color: #0056b3;
+}
